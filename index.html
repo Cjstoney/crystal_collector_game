@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <meta charset=UTF-8>
+
 <head>
     <title>Crystal Collector Game</title>
     <!-- css stylesheets added -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!-- jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <!-- body material -->
+
 <body>
     <h1>Crystal Collector</h1>
     <h2>Instructions</h2>
     <h2 id="random-number"></h2>
     <div id="total-container">
-        <h3 id="wins"></h3>
-        <h3 id="losses"></h3>
+        <h3 id="wins">Wins:</h3>
+        <h3 id="losses">Losses:</h3>
     </div>
     <div class="crystal-container">
-        <a id="crys-1"></a>
-        <a id="crys-2"></a>
-        <a id="crys-3"></a>
-        <a id="crys-4"></a>
+        <button class="buttons">
+            <img id="crys-1" src="assets/images/blue_crystal.jpg" alt="blue crystal">
+        </button>
+        <button class="buttons" id="crys-2"></button>
+        <button class="buttons" id="crys-3"></button>
+        <button class="buttons" id="crys-4"></button>
     </div>
     <div class="score-container">
         <h3>Your total score is:</h3>
         <h3 id="points"></h3>
     </div>
-<!-- javascript link -->
+    <!-- javascript link -->
     <script src="assets/javascript/game.js"></script>
 </body>
