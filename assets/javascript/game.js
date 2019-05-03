@@ -11,7 +11,7 @@
     var userNum =[];
     var currentScore= 0;
     var wins = 0;
-    var loses = 0;
+    var losses = 0;
 
     // creating random number for the computer
     function compNum() {
@@ -25,6 +25,17 @@
             sum = sum + userNum[i];
         }
         return sum;
+    }
+
+    function reset(){
+        losses++
+        compNum();
+        console.log("the number is now "+ targetNum);
+        crys1();
+        crys2();
+        crys3();
+        crys4();
+        currentScore=0;
     }
   
     // functions for each crystal
@@ -50,10 +61,8 @@
 //    if/else statement 
 
     if (currentScore < targetNum) {
-
-console.log();
         
-            // function for crystal one 
+// function for crystal one 
             $("#crys-1").on("click", function () {
                 userNum.push(crystalOne);
                 console.log("crystal one is " + crystalOne);
@@ -85,9 +94,12 @@ console.log();
 
         
     }else if(currentScore === targetNum){
+        alert("You have won");
+
 
     }else{
-
+        alert("Sorry you have lost!");
+        reset();
     }
     
 });
