@@ -4,12 +4,12 @@
     // variables needed 
     var crystalOne = crys1();
     var crystalTwo = crys2();
-    // var crystalThree = crys3();
-    // var crystalFour = crys4();
+    var crystalThree = crys3();
+    var crystalFour = crys4();
     var pointsBox = 0;
     var targetNum = compNum();
     var userNum =[];
-    var currentScore= sumArray();
+    var currentScore= 0;
     var wins = 0;
     var loses = 0;
 
@@ -19,11 +19,8 @@
     }
 
     // function to get the sum of the userNum array
-    function sumArray(userNum) {
+    function sumArray(array) {
         var sum = 0;
-
-        // keeps saying userNum is undefined
-        
         for (i = 0; i < userNum.length; i++) {
             sum = sum + userNum[i];
         }
@@ -37,22 +34,21 @@
     function crys2() { 
         return Math.floor(Math.random()*7)+1;
     }
-    // function crys3() { 
-    //     return Math.floor(Math.random()*11)+1;
-    // }
-    // function crys4() { 
-    //     return Math.floor(Math.random()*9)+1;
-    // }
-    // function pointsTotal(){
-
-    // }
+    function crys3() { 
+        return Math.floor(Math.random()*11)+1;
+    }
+    function crys4() { 
+        return Math.floor(Math.random()*9)+1;
+    }
     
     // javascript to be run
     $(document).ready(function () {
 
     console.log("ready!");
     console.log(targetNum);
-   
+
+//    if/else statement 
+
     if (currentScore < targetNum) {
 
 console.log();
@@ -60,9 +56,30 @@ console.log();
             // function for crystal one 
             $("#crys-1").on("click", function () {
                 userNum.push(crystalOne);
-                console.log(userNum.reduce(reducer));
-                $("#points").text(sum);
-                
+                console.log("crystal one is " + crystalOne);
+                currentScore = sumArray(userNum);
+                $("#points").text(currentScore);
+            });
+
+            $("#crys-2").on("click", function () {
+                userNum.push(crystalTwo);
+                console.log("cyrstal two is " + crystalTwo);
+                currentScore = sumArray(userNum);
+                $("#points").text(currentScore);
+            });
+
+            $("#crys-3").on("click", function () {
+                userNum.push(crystalThree);
+                console.log("crystal three is " + crystalThree);
+                currentScore = sumArray(userNum);
+                $("#points").text(currentScore);
+            });
+
+            $("#crys-4").on("click", function () {
+                userNum.push(crystalFour);
+                console.log("crystal four is " + crystalFour);
+                currentScore = sumArray(userNum);
+                $("#points").text(currentScore);
             });
 
 
