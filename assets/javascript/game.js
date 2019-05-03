@@ -12,7 +12,7 @@
     var currentScore= 0;
     var wins = 0;
     var losses = 0;
-
+   
     // creating random number for the computer
     function compNum() {
         return Math.floor(Math.random() * ((120 - 19) + 1) + 19);
@@ -25,17 +25,6 @@
             sum = sum + userNum[i];
         }
         return sum;
-    }
-
-    function reset(){
-        losses++
-        compNum();
-        console.log("the number is now "+ targetNum);
-        crys1();
-        crys2();
-        crys3();
-        crys4();
-        currentScore=0;
     }
   
     // functions for each crystal
@@ -51,54 +40,67 @@
     function crys4() { 
         return Math.floor(Math.random()*9)+1;
     }
+
+// function for a game reset
+    function reset(){
+        losses++
+        compNum();
+        console.log("the number is now "+ targetNum);
+        crys1();
+        crys2();
+        crys3();
+        crys4();
+        currentScore=0;
+    }
+
     
-    // javascript to be run
-    $(document).ready(function () {
+ // javascript to be run
+ $(document).ready(function () {
 
     console.log("ready!");
     console.log(targetNum);
-
-//    if/else statement 
+    console.log(currentScore);
 
     if (currentScore < targetNum) {
-        
-// function for crystal one 
-            $("#crys-1").on("click", function () {
-                userNum.push(crystalOne);
-                console.log("crystal one is " + crystalOne);
-                currentScore = sumArray(userNum);
-                $("#points").text(currentScore);
-            });
-// function for crystal two
-            $("#crys-2").on("click", function () {
-                userNum.push(crystalTwo);
-                console.log("cyrstal two is " + crystalTwo);
-                currentScore = sumArray(userNum);
-                $("#points").text(currentScore);
-            });
-// function for crystal three
-            $("#crys-3").on("click", function () {
-                userNum.push(crystalThree);
-                console.log("crystal three is " + crystalThree);
-                currentScore = sumArray(userNum);
-                $("#points").text(currentScore);
-            });
-// function for crystal four
-            $("#crys-4").on("click", function () {
-                userNum.push(crystalFour);
-                console.log("crystal four is " + crystalFour);
-                currentScore = sumArray(userNum);
-                $("#points").text(currentScore);
-            });
+
+    $("#random-number").html("Your number is: "+ targetNum);
+
+        // function for crystal one 
+        $("#crys-1").on("click", function () {
+            userNum.push(crystalOne);
+            console.log("crystal one is " + crystalOne);
+            currentScore = sumArray(userNum);
+            $("#points").text(currentScore);
+            console.log(currentScore);
+        });
+        // function for crystal two
+        $("#crys-2").on("click", function () {
+            userNum.push(crystalTwo);
+            console.log("cyrstal two is " + crystalTwo);
+            currentScore = sumArray(userNum);
+            $("#points").text(currentScore);
+        });
+        // function for crystal three
+        $("#crys-3").on("click", function () {
+            userNum.push(crystalThree);
+            console.log("crystal three is " + crystalThree);
+            currentScore = sumArray(userNum);
+            $("#points").text(currentScore);
+        });
+        // function for crystal four
+        $("#crys-4").on("click", function () {
+            userNum.push(crystalFour);
+            console.log("crystal four is " + crystalFour);
+            currentScore = sumArray(userNum);
+            $("#points").text(currentScore);
+        });
 
 
-        
-    }else if(currentScore === targetNum){
-        alert("You have won");
 
 
-    }else{
-        alert("Sorry you have lost!");
+    } else if (currentScore == targetNum) {
+        wins++;
+        $("#wins").html("wins: " + wins);
         reset();
     }
     

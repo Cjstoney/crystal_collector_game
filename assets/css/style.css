@@ -1,3 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* background: url(https://bit.ly/2Y0RenG); */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+    line-height:34px;
+}
+#random-number{
+    float:left;
+}
+#total-container{
+    background:red;
+    /* float:right; */
+    width:45%;
+    padding:20px 20px;
+    margin:5px;
+}
+
 .crystal-images{
     height:150px;
 }
