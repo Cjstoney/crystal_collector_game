@@ -60,21 +60,21 @@ console.log();
                 currentScore = sumArray(userNum);
                 $("#points").text(currentScore);
             });
-
+// function for crystal two
             $("#crys-2").on("click", function () {
                 userNum.push(crystalTwo);
                 console.log("cyrstal two is " + crystalTwo);
                 currentScore = sumArray(userNum);
                 $("#points").text(currentScore);
             });
-
+// function for crystal three
             $("#crys-3").on("click", function () {
                 userNum.push(crystalThree);
                 console.log("crystal three is " + crystalThree);
                 currentScore = sumArray(userNum);
                 $("#points").text(currentScore);
             });
-
+// function for crystal four
             $("#crys-4").on("click", function () {
                 userNum.push(crystalFour);
                 console.log("crystal four is " + crystalFour);
