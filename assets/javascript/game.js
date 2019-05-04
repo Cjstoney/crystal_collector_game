@@ -14,11 +14,13 @@ var wins = 0;
 var losses = 0;
 
 // creating random number for the computer
+
 function compNum() {
     return Math.floor(Math.random() * ((120 - 19) + 1) + 19);
 }
 
 // function to get the sum of the userNum array
+
 function sumArray(array) {
     var sum = 0;
     for (i = 0; i < userNum.length; i++) {
@@ -28,6 +30,7 @@ function sumArray(array) {
 }
 
 // functions for each crystal
+
 function crys1() {
     return Math.floor(Math.random() * 12) + 1;
 }
@@ -46,25 +49,30 @@ function reset() {
     compNum();
     console.log("the number is now " + targetNum);
     crys1();
+    console.log(crystalOne);
     crys2();
+    console.log(crystalTwo);
     crys3();
+    console.log(crystalThree);
     crys4();
+    console.log(crystalFour);
     currentScore = 0;
 }
 
 
 // javascript to be run
-$(document).ready(function () {
 
+$(document).ready(function () {
     console.log("ready!");
     console.log(targetNum);
     console.log(currentScore);
 
-
+    // displaying the random number to guess
 
     $("#random-number").html("Your number is: " + targetNum);
 
     // function for crystal one 
+
     $("#crys-1").on("click", function () {
         userNum.push(crystalOne);
         console.log("crystal one is " + crystalOne);
@@ -76,14 +84,18 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("wins: " + wins);
             reset();
+            
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("losses: " + losses);
-            reset()
+            reset();
+           
         }
     });
+    
     // function for crystal two
+
     $("#crys-2").on("click", function () {
         userNum.push(crystalTwo);
         console.log("cyrstal two is " + crystalTwo);
@@ -94,14 +106,18 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("wins: " + wins);
             reset();
+           
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("losses: " + losses);
-            reset()
+            reset();
+           
         }
     });
+
     // function for crystal three
+    
     $("#crys-3").on("click", function () {
         userNum.push(crystalThree);
         console.log("crystal three is " + crystalThree);
@@ -112,14 +128,18 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("wins: " + wins);
             reset();
+            
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("losses: " + losses);
-            reset()
+            reset();
+            
         }
     });
+    
     // function for crystal four
+    
     $("#crys-4").on("click", function () {
         userNum.push(crystalFour);
         console.log("crystal four is " + crystalFour);
@@ -130,11 +150,13 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("wins: " + wins);
             reset();
+            
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("losses: " + losses);
-            reset()
+            reset();
+            
         }
     });
 

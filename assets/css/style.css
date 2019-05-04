@@ -1,3 +1,29 @@
+#body{
+    box-sizing: border-box;
+    background: tan;
+}
+
+#instructions{
+    width:95%;
+    text-align: center;
+    padding:20px;
+    margin:10px;
+}
+#list-items{
+    font-size:24px;
+}
+#scoreboard{
+    width:95%;
+    padding:20px;
+    margin:10px;
+    text-align: center;
+}
+
+#title{
+    margin:auto;
+    text-align: center;
+}
+
 .crystal-images{
     height:150px;
     margin:auto;

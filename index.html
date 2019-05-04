@@ -16,21 +16,18 @@
 
 <!-- body material -->
 
-<body>
-    <h1>Crystal Collector</h1>
-    <h2>Instructions</h2>
-    <!-- <div>
-        <div class="">
-        <h2 class="row-2" id="random-number"></h2>
-        </div>
-        <div class="row-2" id="total-container">
-            <h3 id="wins">Wins:</h3>
-            <h3 id="losses">Losses:</h3>
-        </div>
-    </div> -->
-    <div class="container">
+<body id="body">
+    <h1 id="title">Crystal Collector</h1>
+    <h2 id="instructions">Instructions:
+        <ul id="list-items">
+        <li>Each diamond is randomly assigned a number.</li>
+        <li>Each time you click on a diamond, your "total score" will increase by the amount assigned to that number.</li>
+        <li>The goal is to use any combination of diamonds to make your "Total Score" equal your "Number". </li>
+    </ul>
+    </h2>
+    <div id="scoreboard" class="container">
             <div class="row">
-              <div class="col">
+              <div id="number-is" class="col">
                     <h2 class="row-2" id="random-number"></h2>
               </div>
               <div class="col" class="row-2" id="total-container">
