@@ -61,6 +61,7 @@ function reset() {
     currentScore = sumArray(userNum);
 }
 
+// GAME CODE
 
 // javascript to be run
 
