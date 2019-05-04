@@ -1,30 +1,47 @@
 #body{
     box-sizing: border-box;
-    background: tan;
+    background:#BEBFC0;
 }
 
 #instructions{
     width:95%;
     text-align: center;
-    padding:20px;
+    padding:20px 20px 10px 20px;
     margin:10px;
+    line-height:40px;
 }
 #list-items{
     font-size:24px;
 }
 #scoreboard{
     width:95%;
-    padding:20px;
+    padding:5px 20px 20px 20px;
     margin:10px;
+    text-align: center;
+}
+.crystal-container{
     text-align: center;
 }
 
 #title{
+    padding: 35px ;
     margin:auto;
     text-align: center;
+    box-shadow: 10px 0px 20px grey;
+
 }
 
 .crystal-images{
     height:150px;
     margin:auto;
+}
+
+.buttons{
+    background:#BEBFC0;
+    border: 0px solid;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.score-container{
+    padding:20px 0px 0px 50px;
 }

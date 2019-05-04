@@ -69,7 +69,7 @@ $(document).ready(function () {
 
     // displaying the random number to guess
 
-    $("#random-number").html("Your number is: " + targetNum);
+    $("#random-number").html("Your target number is: " + targetNum);
 
     // function for crystal one 
 
