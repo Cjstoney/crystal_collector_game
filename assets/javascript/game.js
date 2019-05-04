@@ -82,13 +82,13 @@ $(document).ready(function () {
         if (currentScore === targetNum) {
             wins++;
             alert("Winner!");
-            $("#wins").html("wins: " + wins);
+            $("#wins").html("Wins: " + wins);
             reset();
             
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
-            $("#losses").html("losses: " + losses);
+            $("#losses").html("Losses: " + losses);
             reset();
            
         }
@@ -104,13 +104,13 @@ $(document).ready(function () {
         if (currentScore === targetNum) {
             wins++;
             alert("Winner!");
-            $("#wins").html("wins: " + wins);
+            $("#wins").html("Wins: " + wins);
             reset();
            
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
-            $("#losses").html("losses: " + losses);
+            $("#losses").html("Losses: " + losses);
             reset();
            
         }
@@ -126,13 +126,13 @@ $(document).ready(function () {
         if (currentScore === targetNum) {
             wins++;
             alert("Winner!");
-            $("#wins").html("wins: " + wins);
+            $("#wins").html("Wins: " + wins);
             reset();
             
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
-            $("#losses").html("losses: " + losses);
+            $("#losses").html("Losses: " + losses);
             reset();
             
         }
@@ -148,13 +148,13 @@ $(document).ready(function () {
         if (currentScore === targetNum) {
             wins++;
             alert("Winner!");
-            $("#wins").html("wins: " + wins);
+            $("#wins").html("Wins: " + wins);
             reset();
             
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
-            $("#losses").html("losses: " + losses);
+            $("#losses").html("Losses: " + losses);
             reset();
             
         }
