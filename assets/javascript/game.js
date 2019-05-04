@@ -1,6 +1,4 @@
 
-
-
 // variables needed 
 var crystalOne = crys1();
 var crystalTwo = crys2();
@@ -46,17 +44,21 @@ function crys4() {
 
 // function for a game reset
 function reset() {
-    compNum();
+    targetNum = compNum();
+    $("#random-number").html("Your target number is: " + targetNum);
     console.log("the number is now " + targetNum);
-    crys1();
+    crystalOne = crys1();
     console.log(crystalOne);
-    crys2();
+    crystalTwo = crys2();
     console.log(crystalTwo);
-    crys3();
+    crystalThree = crys3();
     console.log(crystalThree);
-    crys4();
+    crystalFour = crys4();
     console.log(crystalFour);
+    userNum = [];
     currentScore = 0;
+    $("#points").text(currentScore);
+    currentScore = sumArray(userNum);
 }
 
 
@@ -84,16 +86,16 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("Wins: " + wins);
             reset();
-            
+
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("Losses: " + losses);
             reset();
-           
+
         }
     });
-    
+
     // function for crystal two
 
     $("#crys-2").on("click", function () {
@@ -106,18 +108,18 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("Wins: " + wins);
             reset();
-           
+
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("Losses: " + losses);
             reset();
-           
+
         }
     });
 
     // function for crystal three
-    
+
     $("#crys-3").on("click", function () {
         userNum.push(crystalThree);
         console.log("crystal three is " + crystalThree);
@@ -128,18 +130,18 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("Wins: " + wins);
             reset();
-            
+
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("Losses: " + losses);
             reset();
-            
+
         }
     });
-    
+
     // function for crystal four
-    
+
     $("#crys-4").on("click", function () {
         userNum.push(crystalFour);
         console.log("crystal four is " + crystalFour);
@@ -150,13 +152,13 @@ $(document).ready(function () {
             alert("Winner!");
             $("#wins").html("Wins: " + wins);
             reset();
-            
+
         } else if (currentScore > targetNum) {
             losses++;
             alert("I'm sorry, you lost this round")
             $("#losses").html("Losses: " + losses);
             reset();
-            
+
         }
     });
 
